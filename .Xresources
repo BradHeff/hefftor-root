@@ -121,7 +121,7 @@ URxvt*keysym.M-s:       perl:keyboard-select:search
 URxvt*keysym.M-u:       perl:url-select:select_next
 URxvt*resize-font.smaller:	C-Down
 URxvt*resize-font.bigger:	C-Up
-URxvt*geometry: 		75x21
+URxvt*geometry: 		75x23
 
 !! Change font size on Control-Plus/Minus
 !URxvt.keysym.C-plus:     perl:resize-font:bigger
