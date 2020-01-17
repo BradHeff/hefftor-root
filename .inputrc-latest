@@ -1,2 +1,4 @@
 # Make Tab autocomplete regardless of filename case
 set completion-ignore-case on
+"\e[7~":beginning-of-line
+"\e[8~":end-of-line
