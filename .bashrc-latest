@@ -184,8 +184,6 @@ alias yrm="yay -R --color auto"
 alias ysr="yay -Ss --color auto"
 alias ydep="deps y"
 
-#generate repo databases
-alias add-repo="repo-add hefftor-repo.db.tar.gz *.pkg.tar.xz"
 
 #ps
 alias psa="ps auxf"
