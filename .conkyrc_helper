@@ -1,0 +1,91 @@
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+--[[
+Conky, a system monitor, based on torsmo
+Any original torsmo code is licensed under the BSD license
+All code written since the fork of torsmo is licensed under the GPL
+Please see COPYING for details
+Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+Copyright (c) 2005-2012 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+All rights reserved.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+]]
+
+--[[# Purple 9372d2]]
+conky.config = {
+    background = true,
+    update_interval = 1,
+
+    cpu_avg_samples = 2,
+    net_avg_samples = 2,
+    temperature_unit = celsius,
+
+    double_buffer = true,
+    no_buffers = true,
+    text_buffer_size = 2048,
+
+    gap_x = 10,
+    gap_y = 0,
+
+    minimum_width = 250,
+
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_argb_visual = true,
+    own_window_argb_value = 80,
+    own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
+    border_inner_margin = 0,
+    border_outer_margin = 0,
+    alignment = 'middle_right',
+
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = false,
+    default_bar_width = 220,
+    default_bar_height = 3,
+    default_outline_color = 'FFFFFF',
+
+    override_utf8_locale = true,
+    use_xft = true,
+    font = 'Fivo Sans thin:bold:size=10',
+    xftalpha = 0.8,
+    uppercase = false,
+
+    default_color = 'FFFFFF',
+    color1 = 'FFFFFF',
+    color2 = 'dda9bf',
+    color3 = '401343',
+    color4 = 'fae4df',
+    color5 = 'e6d5ec',
+}
+
+conky.text = [[
+${color2}${font Fivo Sans heavy}SYSTEM ${hr 1}${font}${color}
+${voffset 5}${texeci 3600 lsb_release -sir}
+${voffset 4}Kernel:$alignr${texeci 3600 uname -r}
+${voffset 4}Uptime: $alignr$uptime
+${voffset 4}Packages: $alignr${texeci 3600 pacman -Qq --color never | wc -l}
+${voffset 4}Throtle: ${alignr}${freq} MHz
+${voffset 4}Processes: ${alignr}$processes ($running_processes running)
+${voffset 4}Load: ${alignr}$loadavg
+
+${color2}${font Fivo Sans heavy}Keybinds ${hr 1}${color}${font}
+${voffset 5}Browser: $alignr Super+W
+${voffset 4}Terminal: $alignr Super+Enter
+${voffset 4}File Manager: $alignr Super+Shift+Enter
+${voffset 4}Rofi: $alignr Super+Shift+D
+${voffset 4}dmenu: $alignr Super+Shift+W
+${voffset 4}VSCode: $alignr Super+E
+${voffset 4}SP/DD Terminal: $alignr Super+D
+
+]]
