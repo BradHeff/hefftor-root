@@ -23,6 +23,15 @@ SELECT(){
 fi
 }
 
+#include Debian wrappers
+if [ -f /usr/share/bin/apt ]; then
+    . /usr/share/bin/apt
+fi
+
+if [ -f /usr/share/bin/apt-get ]; then
+    . /usr/share/bin/apt-get
+fi 
+
 COLOR_BLACK="\[$(tput setaf 0)\]"
 COLOR_RED="\[$(tput setaf 1)\]"
 COLOR_GREEN="\[$(tput setaf 2)\]"
