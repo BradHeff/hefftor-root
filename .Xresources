@@ -97,12 +97,12 @@ URxvt*color14: #93e0e3
 URxvt*color15: #ffffff
 
 ! fonts
-URxvt*letterSpace: 	 			1
-URxvt*font:                 	xft:JetBrains Mono:style=Regular:size=11
-URxvt*imFont:               	xft:JetBrains Mono:style=Regular:size=11
-URxvt*boldFont:             	xft:JetBrains Mono:style=Bold:size=11
-URxvt*italicFont:           	xft:JetBrains Mono:style=Italic:size=11
-URxvt*boldItalicFont:    		xft:JetBrains Mono:style=Regular:size=11
+URxvt*letterSpace: 	 			-1
+URxvt*font:                 	xft:Hack:style=Regular:size=11
+URxvt*imFont:               	xft:Hack:style=Regular:size=11
+URxvt*boldFont:             	xft:Hack:style=Bold:size=11
+URxvt*italicFont:           	xft:Hack:style=Italic:size=11
+URxvt*boldItalicFont:    		xft:Hack:style=Regular:size=11
 ! run :.!fc-list | grep <font-name>
 
 ! perl extensions
